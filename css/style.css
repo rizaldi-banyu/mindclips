@@ -1,171 +1,161 @@
-/* Global */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* =========================================
+   MINDCLIPS — MAIN STYLESHEET
+   Edit warna, spacing, dan komponen di sini.
+========================================= */
 
+/* 1. GLOBAL */
+:root {
+  --ink: #171717;
+  --muted: #777;
+  --line: #e9e9e9;
+  --soft: #f6f6f4;
+  --white: #fff;
+  --radius: 16px;
+  --container: 1160px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
-    font-family: Arial, sans-serif;
-    color: #171717;
-    background: #ffffff;
+  margin: 0;
+  color: var(--ink);
+  background: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
 }
+a { color: inherit; text-decoration: none; }
+button, input, select { font: inherit; }
+img { max-width: 100%; }
+.container { width: min(var(--container), calc(100% - 40px)); margin-inline: auto; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.eyebrow { margin: 0 0 12px; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: 2px; }
+h1, h2, h3, p { overflow-wrap: anywhere; }
+h1, h2, h3 { line-height: 1.15; }
+.button { display: inline-flex; align-items: center; gap: 18px; padding: 13px 19px; border-radius: 999px; font-size: 13px; font-weight: 700; transition: transform .2s, opacity .2s; }
+.button:hover { transform: translateY(-2px); opacity: .88; }
+.button-dark { color: var(--white); background: var(--ink); }
+.button-light { color: var(--ink); background: var(--white); }
+.text-link { font-size: 13px; font-weight: 700; }
+.text-link span { margin-left: 6px; }
 
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 8%;
-    border-bottom: 1px solid #eeeeee;
+/* 2. NAVBAR */
+.site-header { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line); }
+.nav-wrap { min-height: 72px; display: flex; align-items: center; justify-content: space-between; }
+.brand { font-size: 23px; font-weight: 800; letter-spacing: -1.2px; }
+.brand span { color: #8b8b8b; }
+.main-nav { display: flex; align-items: center; gap: 30px; }
+.main-nav a { color: var(--muted); font-size: 13px; }
+.main-nav a:hover, .main-nav a.active { color: var(--ink); }
+.menu-toggle { display: none; border: 0; background: transparent; font-size: 24px; cursor: pointer; }
+
+/* 3. HERO */
+.hero { background: var(--soft); }
+.hero-content { padding-top: 105px; padding-bottom: 110px; }
+.hero h1 { max-width: 700px; margin: 0 0 20px; font-size: clamp(38px, 6vw, 68px); letter-spacing: -3px; }
+.hero h1 span { color: #888; }
+.hero-copy { max-width: 490px; margin: 0 0 28px; color: var(--muted); font-size: 15px; }
+
+/* 4. SECTION / HEADINGS */
+.section { padding-top: 82px; padding-bottom: 88px; }
+.section-heading { display: flex; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 28px; }
+.section-heading h2, .cta-content h2 { margin: 0; font-size: 32px; letter-spacing: -1px; }
+.page-main { min-height: 62vh; padding-top: 64px; padding-bottom: 90px; }
+.page-heading { margin-bottom: 30px; }
+.page-heading h1, .about-page h1 { margin: 0 0 12px; font-size: clamp(34px, 5vw, 52px); letter-spacing: -2px; }
+.page-heading > p:last-child, .about-page > p { color: var(--muted); }
+
+/* 5. PRODUCT GRID / CARD */
+.product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 22px; }
+.product-card { min-width: 0; }
+.product-card-link { display: block; }
+.product-card h3 { margin: 12px 0 5px; font-size: 16px; }
+.product-category { margin: 0; color: var(--muted); font-size: 12px; }
+.product-price { margin: 9px 0 0; font-size: 14px; font-weight: 700; }
+.product-card-link:hover h3 { text-decoration: underline; text-underline-offset: 3px; }
+.loading, .empty-state, .result-count { color: var(--muted); font-size: 13px; }
+
+/* 6. PRODUCT IMAGE — satu tempat untuk mengatur ukuran gambar */
+.product-card .product-image {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #f5f5f5;
+  border-radius: 12px;
 }
-
-.logo {
-    font-size: 25px;
-    font-weight: 800;
+.product-card .product-image img {
+  width: 80%;
+  height: 80%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
 }
-
-.nav-links {
-    display: flex;
-    gap: 30px;
-    list-style: none;
+.product-detail-image {
+  min-height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 28px;
+  background: var(--soft);
+  border-radius: var(--radius);
 }
+.product-detail-image img { width: 100%; height: 330px; object-fit: contain; }
 
-.nav-links a {
-    text-decoration: none;
-    color: #333333;
-    font-size: 14px;
+/* 7. CATALOG TOOLS */
+.catalog-tools { display: grid; grid-template-columns: minmax(180px, 1fr) 210px 210px; gap: 12px; margin: 28px 0 12px; }
+.catalog-tools input, .catalog-tools select { width: 100%; min-height: 44px; padding: 0 13px; border: 1px solid var(--line); border-radius: 8px; background: var(--white); color: var(--ink); outline: none; }
+.catalog-tools input:focus, .catalog-tools select:focus { border-color: #888; }
+.result-count { margin: 0 0 22px; }
+
+/* 8. PRODUCT DETAIL */
+.back-link { display: inline-block; margin-bottom: 25px; color: var(--muted); font-size: 13px; }
+.product-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.product-detail-copy h1 { margin: 0 0 12px; font-size: clamp(28px, 4vw, 42px); letter-spacing: -1.5px; }
+.product-detail-copy p { color: var(--muted); }
+.detail-price { color: var(--ink) !important; font-size: 22px; font-weight: 700; }
+.detail-meta { display: flex; flex-wrap: wrap; gap: 14px; margin: 18px 0 25px; color: var(--muted); font-size: 13px; }
+
+/* 9. CTA / ABOUT */
+.cta-band { padding: 48px 0; background: var(--ink); color: var(--white); }
+.cta-content { display: flex; align-items: center; justify-content: space-between; gap: 25px; }
+.cta-content .eyebrow { color: #aaa; }
+.about-page { max-width: 780px; }
+.about-page > p { max-width: 680px; margin-bottom: 20px; }
+
+/* 10. FOOTER */
+.site-footer { border-top: 1px solid var(--line); }
+.footer-inner { padding-top: 35px; padding-bottom: 35px; }
+.brand-footer { font-size: 20px; }
+.footer-inner p { margin: 8px 0 16px; color: var(--muted); font-size: 13px; }
+.footer-inner small { color: #999; font-size: 11px; }
+
+/* 11. RESPONSIVE */
+@media (max-width: 760px) {
+  .container { width: min(var(--container), calc(100% - 32px)); }
+  .nav-wrap { min-height: 64px; }
+  .menu-toggle { display: block; }
+  .main-nav { display: none; position: absolute; top: 64px; left: 0; right: 0; padding: 18px 24px; background: var(--white); border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; gap: 16px; }
+  .main-nav.open { display: flex; }
+  .hero-content { padding-top: 75px; padding-bottom: 80px; }
+  .hero h1 { letter-spacing: -1.8px; }
+  .section { padding-top: 58px; padding-bottom: 62px; }
+  .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 14px; }
+  .product-card .product-image { height: 175px; }
+  .catalog-tools { grid-template-columns: 1fr 1fr; }
+  .search-box { grid-column: 1 / -1; }
+  .product-detail { grid-template-columns: 1fr; gap: 28px; }
+  .product-detail-image { min-height: 280px; }
+  .product-detail-image img { height: 250px; }
+  .cta-content { align-items: flex-start; flex-direction: column; }
 }
-
-/* Hero */
-.hero {
-    padding: 120px 8%;
-    background: #f7f7f7;
-}
-
-.subtitle {
-    font-size: 12px;
-    letter-spacing: 3px;
-    color: #777777;
-    margin-bottom: 20px;
-}
-
-.hero h2 {
-    font-size: clamp(40px, 6vw, 70px);
-    line-height: 1.1;
-    margin-bottom: 25px;
-}
-
-.description {
-    max-width: 450px;
-    line-height: 1.7;
-    color: #666666;
-    margin-bottom: 30px;
-}
-
-.btn-primary {
-    display: inline-block;
-    padding: 15px 25px;
-    background: #171717;
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-/* Featured */
-.featured {
-    padding: 90px 8%;
-}
-
-.section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 35px;
-}
-
-.section-header h2 {
-    font-size: 32px;
-}
-
-.section-header a {
-    text-decoration: none;
-    color: #171717;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.product-image {
-    height: 250px;
-    background: #eeeeee;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #888888;
-    margin-bottom: 15px;
-}
-
-.product-card h3 {
-    font-size: 18px;
-    margin-bottom: 8px;
-}
-
-.product-card p {
-    font-size: 13px;
-    color: #777777;
-}
-
-/* Footer */
-footer {
-    padding: 50px 8%;
-    background: #171717;
-    color: white;
-    text-align: center;
-}
-
-footer p {
-    margin-top: 15px;
-    color: #aaaaaa;
-    font-size: 13px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-
-    .navbar {
-        padding: 20px 5%;
-    }
-
-    .nav-links {
-        gap: 15px;
-    }
-
-    .nav-links a {
-        font-size: 12px;
-    }
-
-    .hero {
-        padding: 90px 6%;
-    }
-
-    .featured {
-        padding: 60px 6%;
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
-    .product-image {
-        height: 170px;
-    }
-
-    .section-header h2 {
-        font-size: 24px;
-    }
+@media (max-width: 420px) {
+  .product-grid { grid-template-columns: 1fr 1fr; }
+  .product-card .product-image { height: 145px; }
+  .product-card .product-image img { width: 82%; height: 82%; }
+  .catalog-tools { grid-template-columns: 1fr; }
+  .search-box { grid-column: auto; }
+  .section-heading h2, .cta-content h2 { font-size: 27px; }
 }

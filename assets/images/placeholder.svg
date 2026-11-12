@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+<rect width="800" height="600" fill="#f3f3f1"/>
+<g fill="none" stroke="#b8b8b4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+<rect x="290" y="170" width="220" height="170" rx="18"/>
+<circle cx="355" cy="225" r="18"/><path d="M310 310l75-65 45 38 40-34 30 61"/>
+</g>
+<text x="400" y="410" font-family="Arial,sans-serif" font-size="30" fill="#888" text-anchor="middle">Ganti dengan foto produk</text>
+</svg>

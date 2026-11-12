@@ -1,0 +1,38 @@
+[
+  {
+    "id": "rak-piring",
+    "name": "Rak Piring Wastafel Stainless Steel",
+    "category": "Dapur",
+    "price": 214999,
+    "rating": "4.9",
+    "sold": "8rb+",
+    "image": "../assets/images/placeholder.svg",
+    "affiliate_link": "https://s.shopee.co.id/60SxKQfcWP",
+    "description": "Rak piring stainless steel untuk membantu merapikan area wastafel dan perlengkapan dapur.",
+    "featured": true
+  },
+  {
+    "id": "sikat-5-in-1",
+    "name": "Sikat Pembersih 5 in 1",
+    "category": "Peralatan Rumah",
+    "price": 0,
+    "rating": "",
+    "sold": "",
+    "image": "../assets/images/placeholder.svg",
+    "affiliate_link": "https://s.shopee.co.id/9APuAoaBqj",
+    "description": "Alat pembersih multifungsi untuk membantu membersihkan beberapa area rumah.",
+    "featured": true
+  },
+  {
+    "id": "lap-fiber",
+    "name": "Kain Lap Fiber",
+    "category": "Peralatan Rumah",
+    "price": 0,
+    "rating": "",
+    "sold": "",
+    "image": "../assets/images/placeholder.svg",
+    "affiliate_link": "https://s.shopee.co.id/3g4rTALOcB",
+    "description": "Kain lap serbaguna untuk kebutuhan bersih-bersih sehari-hari.",
+    "featured": true
+  }
+]

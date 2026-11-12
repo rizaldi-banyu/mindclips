@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jelajahi katalog produk pilihan MindClips.">
+  <title>Jelajahi Produk — MindClips</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html">Mind<span>Clips</span></a>
+      <button class="menu-toggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <nav class="main-nav">
+        <a href="../index.html">Beranda</a>
+        <a class="active" href="explore.html">Jelajahi</a>
+        <a href="about.html">Tentang</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-main">
+    <div class="page-heading">
+      <p class="eyebrow">KATALOG MINDCLIPS</p>
+      <h1>Jelajahi produk</h1>
+      <p>Temukan produk pilihan berdasarkan kebutuhanmu.</p>
+    </div>
+    <div class="catalog-tools">
+      <label class="search-box"><span class="sr-only">Cari produk</span><input id="search-input" type="search" placeholder="Cari nama produk..."></label>
+      <select id="category-filter" aria-label="Filter kategori"><option value="">Semua kategori</option></select>
+      <select id="sort-select" aria-label="Urutkan produk">
+        <option value="default">Urutan default</option>
+        <option value="name-asc">Nama: A–Z</option>
+        <option value="price-asc">Harga: termurah</option>
+        <option value="price-desc">Harga: termahal</option>
+      </select>
+    </div>
+    <p id="result-count" class="result-count"></p>
+    <div id="catalog-products" class="product-grid">
+      <p class="loading">Memuat produk...</p>
+    </div>
+    <p id="empty-state" class="empty-state" hidden>Produk tidak ditemukan. Coba kata kunci lain.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner"><a class="brand brand-footer" href="../index.html">Mind<span>Clips</span></a><p>Temukan produk pilihan dengan lebih mudah.</p><small>© <span data-year></span> MindClips. Beberapa tautan merupakan tautan afiliasi.</small></div>
+  </footer>
+  <script src="../js/app.js"></script>
+</body>
+</html>
