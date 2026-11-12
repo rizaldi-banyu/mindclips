@@ -6,7 +6,7 @@
     "price": 214999,
     "rating": "4.9",
     "sold": "8rb+",
-    "image": "../assets/images/rak-piring.jpeg",
+    "image": "assets/images/rak-piring.jpeg",
     "affiliate_link": "https://s.shopee.co.id/60SxKQfcWP",
     "description": "Rak piring stainless steel untuk membantu merapikan area wastafel dan perlengkapan dapur.",
     "featured": true
@@ -18,7 +18,7 @@
     "price": 0,
     "rating": "",
     "sold": "",
-    "image": "../assets/images/placeholder.svg",
+    "image": "assets/images/placeholder.svg",
     "affiliate_link": "https://s.shopee.co.id/sikat.jpeg",
     "description": "Alat pembersih multifungsi untuk membantu membersihkan beberapa area rumah.",
     "featured": true
@@ -30,7 +30,7 @@
     "price": 0,
     "rating": "",
     "sold": "",
-    "image": "../assets/images/lap-fiber.jpeg",
+    "image": "assets/images/lap-fiber.jpeg",
     "affiliate_link": "https://s.shopee.co.id/3g4rTALOcB",
     "description": "Kain lap serbaguna untuk kebutuhan bersih-bersih sehari-hari.",
     "featured": true
